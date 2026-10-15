@@ -19,7 +19,7 @@ It uses Requests and Beautiful Soup for regular web pages, with Selenium as a fa
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/Abdullxploit/business-contact-scraper.git
 cd business-contact-scraper
 ```
 
