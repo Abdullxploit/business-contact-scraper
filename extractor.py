@@ -50,7 +50,7 @@ def extract_json_ld_phone(json_ld_script):
     for script in json_ld_script:
         try:
             data = json.loads(script.string)
-        except(json.JSONDecodeError, TypeError):
+        except(json.JSONDecodeError, TypeError) as error:
             logger.debug("Skipping invalid JSON-LD script: %s",
                          error)
             continue
@@ -76,7 +76,7 @@ def clean_phone_numbers(numbers):
                 if formatted not in cleaned_numbers:
                     cleaned_numbers.append(formatted)
 
-        except phonenumbers.NumberParseException:
+        except phonenumbers.NumberParseException as error:
             logger.debug(
                 "Skipping unparseable phone number %s: %s",
                 number,
